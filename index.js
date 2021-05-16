@@ -13,7 +13,7 @@ app.use(cors())
 // Include routers
 const receiptRoute = require('./routes/receipt')
 
-app.use('/api/receipt', receiptRoute)
+app.use('/receipt', receiptRoute)
 
 
 // Connext to DB

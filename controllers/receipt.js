@@ -24,7 +24,7 @@ module.exports = {
   
     try {
       a = await newRecord.save()
-      res.json(a)
+      res.send({ message: 'Receipt created', success: true})
     } catch (err) {
       res.json({ message: err })
     }
@@ -41,10 +41,8 @@ module.exports = {
   editReceipt: async (req, res) => {
     const { store, tel, GSTReg, date, receiptId, descriptions, total } = req.body
     try {
-      console.log(req.params.id)
       const targetRecord = await Record.findOne({ _id: req.params.id })
 
-      console.log(targetRecord.store)
       targetRecord.store = store
       targetRecord.tel = tel
       targetRecord.GSTReg = GSTReg
@@ -54,15 +52,15 @@ module.exports = {
       targetRecord.total = total
       
       await targetRecord.save()
-      res.send({ message: 'edit success'})
+      res.send({ message: 'Receipt edited!', success: true})
     } catch (err) {
-      res.json({ message: err })
+      res.json({ message: err, success: false })
     }
   },
   deleteReceipt: async (req, res) => {
     try {
       await Record.deleteOne({ _id: req.params.id })
-      res.send({ message: 'delete success'})
+      res.send({ message: 'Receipt deleted!', success: true})
     } catch (err) {
       console.log(err)
     }

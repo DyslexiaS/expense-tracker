@@ -28,10 +28,6 @@ const receiptSchema = new Schema({
         type: String,
         required: true
       },
-      QTY: {
-        type: Number,
-        required: true
-      },
       unitPrice: {
         type: Number,
         required: true
