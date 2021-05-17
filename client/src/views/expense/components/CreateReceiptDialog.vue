@@ -39,7 +39,7 @@
         </label>
         <input-block
           v-model.trim="receiptInfo.tel"
-          v-validate="'required|number'"
+          v-validate="'required|numeric'"
           placeholder="Store Tel"
           class="input__field--input"
           :name="'telephone'"
@@ -51,7 +51,7 @@
         </label>
         <input-block
           v-model.trim="receiptInfo.GSTReg"
-          v-validate="'required|number'"
+          v-validate="'required|numeric'"
           placeholder="GST Reg"
           class="input__field--input"
           :name="'GSTReg'"
@@ -63,7 +63,7 @@
         </label>
         <input-block
           v-model.trim="receiptInfo.receiptId"
-          v-validate="'required|number'"
+          v-validate="'required|numeric'"
           placeholder="Receipt ID"
           class="input__field--input"
           :name="'GSTReg'"
