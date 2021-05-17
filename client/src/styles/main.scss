@@ -1,0 +1,7 @@
+// normalize css
+@import 'normalize-scss';
+@include normalize();
+
+// common
+@import './common/variables';
+@import './common/base';

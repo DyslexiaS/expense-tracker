@@ -11,5 +11,4 @@ lerna-debug.log*
 .env.test
 
 dist
-/client
 /node_modules
