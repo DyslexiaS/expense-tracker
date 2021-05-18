@@ -26,12 +26,12 @@ export default {
   justify-content: center;
   align-items: center;
   &__icon {
-    color: $theme-text-color-primary;
-    font-size: $theme-font-size-x-jumbo;
+    color: #DDDDDD;
+    font-size: 24px;
   }
   &__description {
     margin-top: 10px;
-    font-size: $theme-font-size-jumbo;
+    font-size: 16px;
   }
 }
 </style>

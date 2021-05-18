@@ -25,12 +25,12 @@ const routes = [
     path: '/login',
     name: 'PageLogin',
     component: () => import('@/views/PageLogin')
+  },
+  {
+    path: '*',
+    name: 'NotFound',
+    component: () => import('@/views/NotFound')
   }
-  // {
-  //   path: '*',
-  //   name: 'NotFound',
-  //   component: () => import('@/views/NotFound')
-  // }
 ]
 
 const router = new VueRouter({
